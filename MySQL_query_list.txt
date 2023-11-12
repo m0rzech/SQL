@@ -1,0 +1,41 @@
+SQL Queries:
+
+1) Create a query that will display all products and their category names, with product names ending with the letter "p" and category names starting with the letter "c".
+
+2) List the name and unit price of products whose unit price is 20.00 or 50.00 or blank.
+
+3) Find the product ID, name, category it belongs to and unit price from the Products table. The result has to be ordered descending by category, and ascending within each category at unit price.
+
+4) View all regions and the number of suppliers that come from that region.
+
+5) Retrieve the IDs of the six products from the Order Details table that have the smallest order amount (quantity * unit price).
+
+6) Select a list of product IDs from the Order Details table whose average order quantity is greater than 2.
+
+7) Get the names of employees and their order numbers that were issued before January 23, 1998.
+
+8) List all customers and the dates of their orders. Also include those customers who didn't order anything.
+
+9) Display all possible row combinations between the Shippers and Suppliers tables, but only such that the company names in these tables start with the letter "s".
+
+10) Download the product name and order placement date for a given product.
+
+11) Display such pairs of territory names who come from the same region. Pairs should not be repeated.
+
+12) List the customer IDs, the items they ordered, and the total order amounts for those items.
+
+13) List the product IDs and minimum order quantity for these products.
+
+14) Get a list of all companies that did not place an order on May 15, 1997. You must not use the JOIN statement.
+
+15) Create a temporary table from the Customer table and then display all the rows in that table. Only customers whose name starts with the letter t should be included in the temporary table.
+
+16) Delete the rows from the Order Details table for orders that were created on April 14, 1998 and July 17, 1999.
+
+17) Add a row to the Order Details table with an OrderId that will correspond to the OrderId of the order from the Orders table with the date April 14, 1998. The OrderId should be retrieved from the Orders table using a SELECT expression, and not entered explicitly.
+
+18) Increase the unit price by 2 for all products supplied by US suppliers.
+
+19) Add a TotalSales column to the Products table. In the added column, for each product, enter the sum of the order quantities for this product.
+
+20) Delete the column added in the previous task from the Products table.

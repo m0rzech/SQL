@@ -1,0 +1,17 @@
+a.
+The following two tables are given: year2004 and year2005 with the scheme (month int, result decimal(10,2)), where the month column contains subsequent months, while the result determines the financial result for a given month. Write a function that returns tables with the schema (month int, year int, result decimal(10,2)), where the month corresponds to the months from the tables year2004 and year2005, the year takes one of the values 2004 and 2005, and the result column has a value equal to the maximum from the results for 2004 and 2005 for a given month.
+
+b.
+There is a database with several tables containing a different number of columns. Moreover, there is a table list(table varchar(40), column varchar(30), how many with null int, how many without null int,) which at the beginning has only a list of tables with column name. Write a procedure that, for each table-column pair, determines how many rows there are in a given table and how many rows have non-null values in a given column. The found quantities should be entered into the list table in the columns how many with null and how many without null.
+
+c.
+The given tables are Club(name, address) and Band(name, number of members), which are connected by a many-to-many relationship Concert(club name, band name, date). We create the Concerts view (club name, club address, band name, number of band members, date). By creating appropriate triggers, define the INSERT, UPDATE and DELETE operations, which should work as follows:
+
+INSERT. When inserting a row into a view, first check whether the tuple does not already exist. If so, we end up with the appropriate error message, but if not, we go ahead and do the following:
+– We check whether there is a club and team with the given names. If so, we check their data and if something does not match, we end the operation with an appropriate error message.
+– If the inserted tuple contains data of a club or team that is not yet included in the base tables for the view, we add data into the appropriate base tables.
+– Finally, we add data into the Concert tables representing many-to-many relationships.
+
+UPDATE. When modifying, you must make appropriate changes to the base tables for the view.
+
+DELETE. When deleting, we first remove the tuple from the Concert relation, then check whether the club and band from the deleted tuple still appear somewhere in the Concert table. If not, we remove the appropriate tuples from the Club and Team tables.

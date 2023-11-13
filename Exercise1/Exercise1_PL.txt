@@ -1,0 +1,37 @@
+a.
+Dane są następujące dwie tabele: rok2004 oraz rok2005 o schemacie (miesiac int, wynik decimal(
+10,2)), gdzie kolumna miesiąc zawiera kolejne miesiące, natomiast wynik określa wynik
+finansowy za dany miesiąc. Napisz funkcje, która zwraca tabele o schemacie (miesiac int, rok int,
+wynik decimal(10,2)), gdzie miesiąc odpowiada miesiącom z tabel rok2004 i rok2005, rok
+przyjmuje jedna z wartości 2004 oraz 2005, a kolumna wynik ma wartość równa maksimum z
+wyników za rok 2004 i 2005 za dany miesiąc.
+
+b.
+Dana jest baza danych z kilkoma tabelami zawierających różną ilość kolumn.
+Ponadto dana jest tabela lista(tabela varchar(40), kolumna varchar(30), ile z null int, ile bez null
+int,) która na początku ma tylko listę tabel z nazwa kolumny. Napisz procedurę, która dla każdej
+pary tabela– kolumna ustali, ile jest wszystkich wierszy w danej tabeli oraz ile jest wierszy, które
+w podanej kolumnie maja wartość rożną od null. Znalezione ilości należy nanieść do tabeli lista
+odpowiednio w kolumnach ile z null oraz ile bez null.
+
+c.
+Dane są tabele Klub(nazwa, adres) i Zespól(nazwa, ilość członków), które są połączone relacją
+wiele–do–wielu Koncert(nazwa klubu, nazwa zespołu, data). Tworzymy widok Koncerty(nazwa
+klubu, adres klubu, nazwa zespołu, ilość członków zespołu, data). Poprzez utworzenie
+odpowiednich wyzwalaczy zdefiniuj operacje INSERT, UPDATE i DELETE, które powinny
+działać następująco:
+
+INSERT. Przy wstawieniu wiersza do widoku najpierw należy sprawdzić, czy krotka juz nie
+istnieje. Jeśli tak, kończymy z odpowiednim komunikatem błędu, natomiast jeśli nie,
+przechodzimy dalej i wykonujemy następujące czynności:
+– Sprawdzamy, czy istnieją klub i zespół o podanych nazwach. Jeśli tak, sprawdzamy ich dane i
+w przypadku, gdy cos się nie zgadza, kończymy operacje z odpowiednim komunikatem błędu.
+– W przypadku, gdy wstawiana krotka zawiera dane klubu lub zespołu, którego w tabelach
+bazowych dla widoku jeszcze nie ma, uzupełniamy odpowiednie tabele bazowe.
+– Na końcu uzupełniamy tabele Koncert reprezentująca relacje wiele–do–wielu.
+
+UPDATE. Przy modyfikacji należy nanieść odpowiednie zmiany na tabele bazowe dla widoku.
+
+DELETE. Przy usuwaniu najpierw usuwamy krotkę z relacji Koncert, następnie sprawdzamy, czy
+klub i zespół z usuniętej krotki występują jeszcze gdzieś w tabeli Koncert. Jeśli nie, usuwamy
+odpowiednie krotki z tabel Klub i Zespól.

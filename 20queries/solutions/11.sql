@@ -1,3 +1,3 @@
-SELECT a.TerritoryDescription, b.TerritoryDescription  
-From Territories as a, Territories as b 
-Where a.RegionID = b.RegionID AND a.TerritoryID <> b.TerritoryID;
+SELECT a.City, b.City
+From suppliers as a, suppliers as b 
+Where a.Country = b.Country AND a.City <> b.City;

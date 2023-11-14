@@ -1,3 +1,3 @@
 select ProductID, MIN(Quantity)
-from [Order Details]
+from orderdetails
 group by ProductID

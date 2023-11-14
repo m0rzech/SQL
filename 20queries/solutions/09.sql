@@ -1,4 +1,4 @@
 use Northwind
-select Shippers.CompanyName, Suppliers.CompanyName
+select Shippers.ShipperName, Suppliers.SupplierName
 from Shippers, Suppliers
-where Shippers.CompanyName like 's%' and Suppliers.CompanyName like 's%'
+where Shippers.ShipperName like 's%' and Suppliers.SupplierName like 's%'

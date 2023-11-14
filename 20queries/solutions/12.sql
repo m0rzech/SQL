@@ -1,10 +1,10 @@
 select Customers.CustomerID, Products.ProductName, 
-sum([Order Details].Quantity*[Order Details].UnitPrice)
+sum(orderdetails.Quantity*Products.Price)
 
 from Customers 
  join Orders on  Orders.CustomerID = Customers.CustomerID
- join [Order Details] on Orders.OrderID = [Order Details].OrderID
- join Products on [Order Details].ProductID = Products.ProductID
+ join orderdetails on Orders.OrderID = orderdetails.OrderID
+ join Products on orderdetails.ProductID = Products.ProductID
 
 group by Customers.CustomerID, Products.ProductName
 order by CustomerID ASC

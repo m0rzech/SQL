@@ -1,4 +1,4 @@
 select ProductID
-from [Order Details]
+from orderdetails
 group by ProductID
 having AVG(Quantity) > 2

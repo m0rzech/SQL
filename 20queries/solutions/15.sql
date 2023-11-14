@@ -1,6 +1,7 @@
---drop table [#Temp] ;
+#--drop table Temp ;
 
-select * INTO #Temp from Customers
-where CompanyName like 't%';
+Create Temporary Table Temp
+select * from Customers
+where CustomerName like 't%';
 
-select * from #Temp;
+select * from Temp;

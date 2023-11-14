@@ -1,3 +1,3 @@
-select ProductName, UnitPrice 
+select ProductName, Price 
 from Products 
-where UnitPrice = 20.00 or UnitPrice = 50.00 or UnitPrice = null
+where Price = 20.00 or Price = 50.00 or Price = null

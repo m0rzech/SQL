@@ -6,13 +6,13 @@ Zapytania SQL:
 
 3) Pobierz identyfikator produktu, jego nazwę, kategorię do której należy oraz cenę jednostkową z tabeli Products. Wynik ma być uporządkowany malejąco po kategorii, oraz rosnąco wewnątrz każdej kategorii po cenie jednostkowej.
 
-4) Wyświetl wszystkie regiony oraz liczbę dostawców, którzy pochodzą z tego regionu.
+4) Wyświetl wszystkie państwa oraz liczbę dostawców, którzy pochodzą z tych państw.
 
-5) Pobierz identyfikatory sześciu produktów z tabeli Order Details, których kwota na zamówieniu (ilość * cena jednostkowa) jest najmniejsza.
+5) Pobierz identyfikatory sześciu produktów z tabeli Order Details, których ilość na zamówieniu jest najmniejsza.
 
 6) Wybierz listę takich identyfikatorów produktów z tabeli Order Details, których średnia ilości zamówień jest większa niż 2.
 
-7) Pobierz nazwiska pracowników i numery ich zamówień, które to zamówienia zostały wystawione przed 23 stycznia 1998 roku.
+7) Pobierz nazwiska pracowników i numery ich zamówień, które to zamówienia zostały wystawione przed 1 września 1996 roku.
 
 8) Wypisz wszystkich klientów wraz z datami zamówień przez nich złożonych. Uwzględnij także tych klientów, którzy nic nie zamówili.
 
@@ -26,13 +26,13 @@ Zapytania SQL:
 
 13) Wypisz identyfikatory produktów i najmniejszą ilość występującą na zamówieniu dla tych produktów.
 
-14) Pobierz listę wszystkich firm, którzy nie złożyli zamówienia 15 maja 1997. Nie wolno użyć instrukcji JOIN.
+14) Pobierz listę wszystkich klientów, którzy nie złożyli zamówienia 7 lipca 1996. Nie wolno użyć instrukcji JOIN.
 
 15) Na podstawie tabeli Customer utwórz tabelę tymczasową, a następnie wyświetl wszystkie wiersze tej tabeli. W tabeli tymczasowej powinni się znaleźć tylko tacy klienci, których nazwa rozpoczyna się na literę t.
 
-16) Usuń wiersze z tablicy Order Details dla takich zamówień, które powstały 14 kwietnia 1998 oraz 17 lipca 1999.
+16) Usuń wiersze z tablicy Order Details dla takich zamówień, które powstały 10 lutego 1997 oraz 12 lutego 1997.
 
-17) Dodaj do tablicy Order Details wiersz z takim OrderId, który będzie odpowiadał OrderId zamówieniu z tabeli Orders o dacie 14 kwietnia 1998. OrderId należy pobrać z tabeli Orders za pomocą wyrażenia SELECT, a nie wpisywać jawnie.
+17) Dodaj do tablicy Order Details wiersz z takim OrderId, który będzie odpowiadał OrderId zamówieniu z tabeli Orders o dacie 29 stycznia 1997. OrderId należy pobrać z tabeli Orders za pomocą wyrażenia SELECT, a nie wpisywać jawnie.
 
 18) Zwiększ cenę jednostkową o 2 dla wszystkich produktów dostarczanych przez dostawców z USA.
 

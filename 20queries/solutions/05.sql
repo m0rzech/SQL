@@ -1,4 +1,4 @@
-select top 6 ProductID
-from [Order Details] 
+select ProductID, Quantity
+from orderdetails
 group by ProductID
-order by SUM(UnitPrice * Quantity) ASC
+order by Quantity ASC Limit 6

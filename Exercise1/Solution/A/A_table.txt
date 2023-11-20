@@ -45,33 +45,5 @@ end $$
 DELIMITER ;
 call fil2();
 
-drop PROCEDURE if EXISTS zadanie;
-drop TABLE if EXISTS t1;
-DELIMITER $$
-CREATE PROCEDURE zadanie() 
-BEGIN   
-	DECLARE wynik INT;
-	declare wynik2004 int;
-	declare wynik2005 int;
-	declare rok int;
-	declare mies int;
-	set mies = 1;
-    	CREATE TABLE t1(miesiac int, rok int, wynik int);
-	while (mies<13) DO    		
-		SELECT MAX(rok2004.wynik) INTO wynik2004 FROM rok2004 WHERE miesiac = mies;
-		SELECT MAX(rok2005.wynik) INTO wynik2005 FROM rok2005 WHERE miesiac = mies;
-		
-		if (wynik2004>wynik2005) THEN
-			set wynik = wynik2004;
-			set rok = 2004;
-		else 
-			set wynik = wynik2005 ;
-			set rok = 2005;
-		END IF;			   
-		INSERT INTO t1 values (mies, rok, wynik);
-		set mies = mies + 1;
-	END WHILE;
-END $$
-DELIMITER ;
-CALL zadanie();
-select * FROM t1;
+
+
